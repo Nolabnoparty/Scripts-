@@ -2,6 +2,28 @@
 
 > **Purpose:** This document outlines the standardized workflow for migrating virtual machines from VMware vSphere to Proxmox VE, including the optimization of storage controllers for Windows guests.
 
+## Folder Tree: Create structure and add drivers
+C:\Migration
+
+Migration
+   scripts
+   drivers
+      Balloon
+         2k16
+         2k19
+         2k22
+         2k25
+         w10
+         w11
+      NetVM
+         ...
+      qemu-ga
+         qemu-ga-x86_64.msi
+      viostor
+         ...
+      virtio
+         virtio-win-gt-x64.msi
+
 ---
 
 ## 🛠 Phase 1: Preparation (vSphere side)
