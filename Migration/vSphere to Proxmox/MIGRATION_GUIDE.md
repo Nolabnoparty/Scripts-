@@ -5,8 +5,11 @@
 ## 📂 Folder Tree: Create Structure and Add Drivers
 To ensure the migration scripts function correctly, you must set up the local directory structure on the target machine as defined below. The primary workspace should be located at `C:\Migration`.
 
-### 🏗️ Directory Hierarchy
-Copy the following structure to organize your scripts and driver binaries:
+# VM Migration Toolkit
+
+This repository contains the structured driver library and automation scripts required for migrating Windows Virtual Machines to KVM/QEMU-based hypervisors (such as Proxmox, Nutanix, or OpenStack).
+
+## 📂 Directory Structure
 
 C:\Migration
 └── Migration/
