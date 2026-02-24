@@ -3,26 +3,35 @@
 > **Purpose:** This document outlines the standardized workflow for migrating virtual machines from VMware vSphere to Proxmox VE, including the optimization of storage controllers for Windows guests.
 
 ## Folder Tree: Create structure and add drivers
-C:\Migration
-
-Migration
-   scripts
-   drivers
-      Balloon
-         2k16
-         2k19
-         2k22
-         2k25
-         w10
-         w11
-      NetVM
-         ...
-      qemu-ga
-         qemu-ga-x86_64.msi
-      viostor
-         ...
-      virtio
-         virtio-win-gt-x64.msi
+C:\
+└── Migration
+    ├── scripts/           # Place your automation and execution scripts here
+    └── drivers/           # Repository for all required VirtIO and QEMU drivers
+        ├── Balloon/       # Memory Ballooning drivers
+        │   ├── 2k16/
+        │   ├── 2k19/
+        │   ├── 2k22/
+        │   ├── 2k25/
+        │   ├── w10/
+        │   └── w11/
+        ├── NetVM/         # Network interface drivers
+        |   ├── 2k16/
+        │   ├── 2k19/
+        │   ├── 2k22/
+        │   ├── 2k25/
+        │   ├── w10/
+        │   └── w11/
+        ├── qemu-ga/       # QEMU Guest Agent installers
+        │   └── qemu-ga-x86_64.msi
+        ├── viostor/       # Block storage drivers
+        |   ├── 2k16/
+        │   ├── 2k19/
+        │   ├── 2k22/
+        │   ├── 2k25/
+        │   ├── w10/
+        │   └── w11/
+        └── virtio/        # Core VirtIO guest tools
+            └── virtio-win-gt-x64.msi
 
 ---
 
