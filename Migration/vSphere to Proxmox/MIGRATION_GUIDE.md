@@ -2,11 +2,16 @@
 
 > **Purpose:** This document outlines the standardized workflow for migrating virtual machines from VMware vSphere to Proxmox VE, including the optimization of storage controllers for Windows guests.
 
-## Folder Tree: Create structure and add drivers
-C:\
-└── Migration
-    ├── scripts/           # Place your automation and execution scripts here
-    └── drivers/           # Repository for all required VirtIO and QEMU drivers
+## 📂 Folder Tree: Create Structure and Add Drivers
+To ensure the migration scripts function correctly, you must set up the local directory structure on the target machine as defined below. The primary workspace should be located at `C:\Migration`.
+
+### 🏗️ Directory Hierarchy
+Copy the following structure to organize your scripts and driver binaries:
+
+C:\Migration
+└── Migration/
+    ├── scripts/           # Automation and execution scripts
+    └── drivers/           # Driver repository
         ├── Balloon/       # Memory Ballooning drivers
         │   ├── 2k16/
         │   ├── 2k19/
@@ -15,22 +20,22 @@ C:\
         │   ├── w10/
         │   └── w11/
         ├── NetVM/         # Network interface drivers
-        |   ├── 2k16/
+        │   ├── 2k16/
         │   ├── 2k19/
         │   ├── 2k22/
         │   ├── 2k25/
         │   ├── w10/
         │   └── w11/
-        ├── qemu-ga/       # QEMU Guest Agent installers
+        ├── qemu-ga/       # QEMU Guest Agent
         │   └── qemu-ga-x86_64.msi
         ├── viostor/       # Block storage drivers
-        |   ├── 2k16/
+        │   ├── 2k16/
         │   ├── 2k19/
         │   ├── 2k22/
         │   ├── 2k25/
         │   ├── w10/
         │   └── w11/
-        └── virtio/        # Core VirtIO guest tools
+        └── virtio/        # VirtIO Guest Tools
             └── virtio-win-gt-x64.msi
 
 ---
